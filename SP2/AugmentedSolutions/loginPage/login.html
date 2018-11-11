@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login AugmentedSolutions</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" href="css/popupmodal.css" />
+<!--===============================================================================================-->
+</head>
+<body onload="isLogged()">
+
+
+	<div class="container-login100" style="background-image: url('fondo.png');">
+		<div class="wrap-login100 p-l-55 p-r-55 p-t-50 p-b-30">
+			<div class="login100-form validate-form">
+                <br>
+                <br>
+                <div class="flex-c">
+                    <img src="logo1.png">
+                </div>
+
+				<span class="login100-form-title p-b-37">
+					Inicio de Sesión
+				</span>
+
+				<div class="wrap-input100 validate-input m-b-20" data-validate="Enter username or email">
+					<input class="input100" type="text" id="email" name="email" placeholder="Correo Electrónico">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input m-b-25" data-validate = "Enter password">
+					<input class="input100" type="password" id="password" name="password" placeholder="Contraseña">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="container-login100-form-btn">
+					<button href="javascript:void(0);" onclick="handleSignIn();" id="quickstart-sign-in" name="signup" class="login100-form-btn">
+						Iniciar Sesión
+					</button>
+				</div>
+
+				<div class="text-center p-t-57 p-b-20">
+					<span class="txt1">
+						O Inicia Sesión con
+					</span>
+				</div>
+
+				<div class="flex-c p-b-150">
+					<a href="javascript:void(0);" onclick="facebookSignin();" class="login100-social-item">
+						<i class="fa fa-facebook-f"></i>
+					</a>
+
+					<a href="javascript:void(0);" onclick="loginGoogle();" class="login100-social-item">
+						<img src="images/icons/icon-google.png" alt="GOOGLE">
+					</a>
+				</div>
+
+				<div class="text-center">
+					<a href="signUp/signup.html" class="txt2 hov1">
+						¿No tienes cuenta? Crea una aquí
+					</a>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+
+
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+	<script src="js/polyfill.js"></script>
+	<script src="js/popupmodal-min.js"></script>
+	<!--===============================================================================================-->
+	<script src="https://www.gstatic.com/firebasejs/5.4.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.4.2/firebase-auth.js"></script>
+
+	<script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+	<script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyB11705lS-Ya4KNoIubWQbIauQi8v2zDVw",
+            authDomain: "augmentedsolutions-cb216.firebaseapp.com",
+            databaseURL: "https://augmentedsolutions-cb216.firebaseio.com",
+            projectId: "augmentedsolutions-cb216",
+            storageBucket: "augmentedsolutions-cb216.appspot.com",
+            messagingSenderId: "590835535173"
+        };
+        firebase.initializeApp(config);
+        firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION);
+	</script>
+    <!-- LOGIN WITH GOOGLE -->
+    <script>
+        function loginGoogle(){
+            function newLoginHappened(user){
+                if(user){
+                    //User is signed in
+                    //isLogged();
+                }else{
+                    var provider = new firebase.auth.GoogleAuthProvider();
+                    firebase.auth().signInWithPopup(provider);
+                }
+            }
+            firebase.auth().onAuthStateChanged(newLoginHappened);
+
+        }
+	</script>
+    <!-- LOGIN WITH FACEBOOK -->
+    <script>
+        var provider = new firebase.auth.FacebookAuthProvider();
+
+        function facebookSignin() {
+            firebase.auth().signInWithPopup(provider)
+
+                .then(function(result) {
+                    var token = result.credential.accessToken;
+                    var user = result.user;
+
+                    console.log(token);
+                    console.log(user);
+                }).catch(function(error) {
+                console.log(error.code);
+                console.log(error.message);
+            });
+        }
+    </script>
+    <script>
+        function isLogged() {
+            function ok(user) {
+                var continuar = "Continuar como: ";
+                var nombre = user.displayName;
+                var msg = continuar.concat(nombre);
+                popup.confirm( { content : msg }, function (param) {
+                    if (param.proceed) {
+                    window.location.href = "profilePage/inicioUser.html";
+					}else{
+						firebase.auth().signOut();
+					}
+                } )
+
+            }
+
+            firebase.auth().onAuthStateChanged(function(user) {
+                if (user) {
+                    // User is signed in.
+                    ok(user);
+
+                } else {
+                    // User is signed out.
+                    firebase.auth().signOut();
+                }
+            });
+        }
+
+    </script>
+	<script type="text/javascript">
+        function handleSignIn() {
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            if (email.length < 4) {
+                popup.alert({content: 'Porfavor ingrese un correo electronico valido.'});
+                return;
+            }
+            if (password.length < 4) {
+                popup.alert({content: 'Porfavor ingrese una contraseña.'});
+                return;
+            }
+            if (email && password){
+                // Sign in with email and pass.
+                // [START createwithemail]
+                firebase.auth().signInWithEmailAndPassword(email, password).then(function (user) {
+                    }
+                ).catch(function (error) {
+                    // Handle Errors here.
+                    var errorMessage = error.message;
+                    // [START_EXCLUDE]
+                    	popup.alert({content: errorMessage});
+
+                    // [END_EXCLUDE]
+                });
+                // [END createwithemail]
+            }
+        }
+	</script>
+
+</body>
+</html>

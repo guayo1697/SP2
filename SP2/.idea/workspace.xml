@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="adea4abd-eb37-4233-aae2-87e678aaa113" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="864674487">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="29" />
+          <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.21" value="1" />
+          <entry key="project.open.time.22" value="1" />
+          <entry key="project.open.time.24" value="1" />
+          <entry key="project.open.time.25" value="2" />
+          <entry key="project.open.time.26" value="3" />
+          <entry key="project.open.time.27" value="4" />
+          <entry key="project.open.time.28" value="2" />
+          <entry key="project.open.time.29" value="2" />
+          <entry key="project.open.time.31" value="2" />
+          <entry key="project.open.time.36" value="1" />
+          <entry key="project.open.time.37" value="1" />
+          <entry key="project.open.time.39" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.40" value="2" />
+          <entry key="project.open.time.41" value="1" />
+          <entry key="project.open.time.49" value="2" />
+          <entry key="project.open.time.51" value="1" />
+          <entry key="project.open.time.53" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.65" value="1" />
+          <entry key="project.open.time.91" value="1" />
+          <entry key="project.opened" value="34" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="css" value="21" />
+          <entry key="html" value="25" />
+          <entry key="js" value="11" />
+          <entry key="scss" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="21" />
+          <entry key="HTML" value="25" />
+          <entry key="JavaScript" value="11" />
+          <entry key="SCSS" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="css" value="323" />
+          <entry key="html" value="8635" />
+          <entry key="js" value="1342" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CSS" value="324" />
+          <entry key="HTML" value="8634" />
+          <entry key="JavaScript" value="1342" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AugmentedSolutions/loginPage/profilePage/inicioUser.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5412">
+              <caret line="246" column="40" selection-start-line="246" selection-start-column="40" selection-end-line="246" selection-end-column="40" />
+              <folding>
+                <element signature="n#style#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AugmentedSolutions/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="52" column="19" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AugmentedSolutions/loginPage/profilePage/js/vuforia.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2464">
+              <caret line="112" column="10" selection-start-line="112" selection-start-column="10" selection-end-line="112" selection-end-column="10" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>just</find>
+      <find>justify</find>
+      <find>text</find>
+      <find>subir</find>
+      <find>uploadFile</find>
+      <find>uploadFI</find>
+      <find>onload</find>
+      <find>useraut</find>
+      <find>ile</find>
+      <find>uploadFi</find>
+      <find>name</find>
+      <find>sendre</find>
+      <find>convT</find>
+      <find>encoded</find>
+      <find>urlTargetImg</find>
+      <find>sendRequest</find>
+      <find>uploadF</find>
+      <find>getFileImg</find>
+      <find>getFileTx</find>
+      <find>urlTargetText</find>
+      <find>vuforia</find>
+      <find>uploadFIle</find>
+      <find>fileVId</find>
+      <find>uploadBUtton</find>
+      <find>selectedFileI</find>
+      <find>selectedFile</find>
+      <find>loading</find>
+      <find>selectedFileImg</find>
+      <find>getFIle</find>
+      <find>element</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/AugmentedSolutions/login/inicio.html" />
+        <option value="$PROJECT_DIR$/AugmentedSolutions/login/login.html" />
+        <option value="$PROJECT_DIR$/AugmentedSolutions/index.html" />
+        <option value="$PROJECT_DIR$/AugmentedSolutions/loginPage/signUp/css/main.css" />
+        <option value="$PROJECT_DIR$/AugmentedSolutions/loginPage/css/main.css" />
+        <option value="$PROJECT_DIR$/AugmentedSolutions/loginPage/js/app.js" />
+        <option value="$PROJECT_DIR$/AugmentedSolutions/loginPage/signUp/js/app.js" />
+        <option value="$USER_HOME$/AppData/Local/Temp/Rar$DRa8336.43165/popupmodal.js-master/index.html" />
+        <option value="$PROJECT_DIR$/AugmentedSolutions/loginPage/login.html" />
+        <option value="$PROJECT_DIR$/AugmentedSolutions/loginPage/signUp/signup.html" />
+        <option value="$PROJECT_DIR$/AugmentedSolutions/loginPage/profilePage/js/main.js" />
+        <option value="$PROJECT_DIR$/AugmentedSolutions/loginPage/profilePage/css/bootstrap.css" />
+        <option value="$PROJECT_DIR$/AugmentedSolutions/loginPage/profilePage/css/icomoon.css" />
+        <option value="$PROJECT_DIR$/AugmentedSolutions/loginPage/profilePage/css/style.css" />
+        <option value="$PROJECT_DIR$/AugmentedSolutions/loginPage/profilePage/inicioUser.html" />
+        <option value="$PROJECT_DIR$/AugmentedSolutions/loginPage/profilePage/js/vuforia.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/AugmentedSolutions/loginPage/profilePage/vuforiajs-master/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="953" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="SP2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SP2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SP2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SP2" type="462c0819:PsiDirectoryNode" />
+              <item name="AugmentedSolutions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SP2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SP2" type="462c0819:PsiDirectoryNode" />
+              <item name="popupmodal.js-master" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\guayo\WebstormProjects\SP2\AugmentedSolutions\loginPage\profilePage\js" />
+      <recent name="C:\Users\guayo\WebstormProjects\SP2\AugmentedSolutions\loginPage\profilePage\images\icons" />
+      <recent name="C:\Users\guayo\WebstormProjects\SP2\AugmentedSolutions\loginPage\profilePage\images" />
+      <recent name="C:\Users\guayo\WebstormProjects\SP2\AugmentedSolutions\loginPage\signUp\js" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\guayo\WebstormProjects\SP2\AugmentedSolutions\loginPage\profilePage" />
+      <recent name="C:\Users\guayo\WebstormProjects\SP2\AugmentedSolutions\loginPage\signUp" />
+      <recent name="C:\Users\guayo\WebstormProjects\SP2\AugmentedSolutions\loginPage" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="inicioUser.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/SP2/AugmentedSolutions/loginPage/profilePage/inicioUser.html">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.inicioUser.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="adea4abd-eb37-4233-aae2-87e678aaa113" name="Default Changelist" comment="" />
+      <created>1535611628880</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1535611628880</updated>
+      <workItem from="1535611632828" duration="1144000" />
+      <workItem from="1535744086371" duration="5243000" />
+      <workItem from="1535754428202" duration="909000" />
+      <workItem from="1535756610409" duration="2596000" />
+      <workItem from="1535761184054" duration="2974000" />
+      <workItem from="1535831792694" duration="9246000" />
+      <workItem from="1536041523624" duration="2249000" />
+      <workItem from="1536355725200" duration="8794000" />
+      <workItem from="1536366598613" duration="3725000" />
+      <workItem from="1536700733076" duration="1473000" />
+      <workItem from="1536728999492" duration="6374000" />
+      <workItem from="1536794775644" duration="4714000" />
+      <workItem from="1536812434800" duration="4239000" />
+      <workItem from="1536817907435" duration="959000" />
+      <workItem from="1536877150706" duration="667000" />
+      <workItem from="1537550964125" duration="7373000" />
+      <workItem from="1537558837581" duration="1334000" />
+      <workItem from="1537560687857" duration="5703000" />
+      <workItem from="1538110239633" duration="8922000" />
+      <workItem from="1538170362547" duration="610000" />
+      <workItem from="1538175216016" duration="601000" />
+      <workItem from="1538177551091" duration="10279000" />
+      <workItem from="1539395977539" duration="604000" />
+      <workItem from="1539624781040" duration="601000" />
+      <workItem from="1539635465167" duration="7257000" />
+      <workItem from="1539988754157" duration="291000" />
+      <workItem from="1540081969433" duration="40000" />
+      <workItem from="1540591329445" duration="640000" />
+      <workItem from="1540596578064" duration="1388000" />
+      <workItem from="1540780215753" duration="7608000" />
+      <workItem from="1541195135791" duration="4009000" />
+      <workItem from="1541202725443" duration="814000" />
+      <workItem from="1541456071495" duration="1226000" />
+      <workItem from="1541801511171" duration="599000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="115205000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1548999" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39978093" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32968238" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/AugmentedSolutions/login/login.html" />
+    <entry file="file://$PROJECT_DIR$/AugmentedSolutions/login/inicio.html" />
+    <entry file="file://$PROJECT_DIR$/AugmentedSolutions/loginPage/signUp/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8536">
+          <caret line="388" column="21" selection-start-line="388" selection-start-column="21" selection-end-line="388" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AugmentedSolutions/p2.html" />
+    <entry file="file://$PROJECT_DIR$/AugmentedSolutions/p1.html" />
+    <entry file="file://$PROJECT_DIR$/AugmentedSolutions/loginPage/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="772">
+          <caret line="248" column="1" selection-start-line="248" selection-start-column="1" selection-end-line="248" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AugmentedSolutions/loginPage/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="8" lean-forward="true" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AugmentedSolutions/loginPage/signUp/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1071">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AugmentedSolutions/loginPage/signUp/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa4180.8361/demo.js" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa8336.43165/popupmodal.js-master/index.html" />
+    <entry file="file://$PROJECT_DIR$/AugmentedSolutions/loginPage/signUp/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3234">
+          <caret line="147" column="17" selection-start-line="147" selection-start-column="17" selection-end-line="147" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AugmentedSolutions/loginPage/profilePage/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/popupmodal.js-master/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="248" column="61" selection-start-line="248" selection-start-column="47" selection-end-line="248" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AugmentedSolutions/loginPage/js/popupmodal.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AugmentedSolutions/loginPage/profilePage/vuforiajs-master/vuforia.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AugmentedSolutions/loginPage/profilePage/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="2120" column="18" selection-start-line="2120" selection-start-column="18" selection-end-line="2120" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AugmentedSolutions/loginPage/profilePage/css/icomoon.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="2756" column="10" selection-start-line="2756" selection-start-column="6" selection-end-line="2756" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AugmentedSolutions/loginPage/profilePage/css/flexslider.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="125" column="6" selection-start-line="125" selection-start-column="2" selection-end-line="125" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AugmentedSolutions/loginPage/profilePage/css/animate.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="579" column="33" selection-start-line="579" selection-start-column="33" selection-end-line="579" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AugmentedSolutions/loginPage/profilePage/fonts/icomoon/icomoon/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="1385" column="10" selection-start-line="1385" selection-start-column="6" selection-end-line="1385" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AugmentedSolutions/loginPage/profilePage/sass/style.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AugmentedSolutions/loginPage/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3696">
+          <caret line="168" column="24" selection-start-line="168" selection-start-column="20" selection-end-line="168" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AugmentedSolutions/loginPage/profilePage/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12804">
+          <caret line="582" selection-start-line="582" selection-end-line="582" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AugmentedSolutions/loginPage/profilePage/inicioUser.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5412">
+          <caret line="246" column="40" selection-start-line="246" selection-start-column="40" selection-end-line="246" selection-end-column="40" />
+          <folding>
+            <element signature="n#style#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AugmentedSolutions/loginPage/profilePage/js/vuforia.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2464">
+          <caret line="112" column="10" selection-start-line="112" selection-start-column="10" selection-end-line="112" selection-end-column="10" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AugmentedSolutions/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="52" column="19" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

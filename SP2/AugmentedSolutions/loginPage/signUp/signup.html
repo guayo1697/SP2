@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Sign Up</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" href="css/popupmodal.css" />
+<!--===============================================================================================-->
+</head>
+<body style="background-color: #999999;">
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="login100-more" style="background-image: url('images/fondoSignUp.png');"></div>
+
+			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
+				<div class="login100-form validate-form" method="POST">
+					<span class="login100-form-title p-b-59">
+						Sign Up
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate="Nombre es requerido">
+						<span class="label-input100">Nombre</span>
+						<input class="input100" type="text"  id="nombre" placeholder="e.g. Juan Pérez">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Se require email válido: ex@abc.xyz">
+						<span class="label-input100">Correo Electrónico</span>
+						<input class="input100" type="text" id="email" placeholder="Correo Electrónico">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Se requiere contraseña">
+						<span class="label-input100">Contraseña</span>
+						<input class="input100" type="password" id="password" placeholder="**********">
+						<span toggle="#password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Se requiere repetir contraseña">
+						<span class="label-input100">Repite Contraseña</span>
+						<input class="input100" type="password" id="passwordver" placeholder="**********">
+                        <span toggle="#passwordver" class="fa fa-fw fa-eye field-icon toggle-password-ver"></span>
+					</div>
+
+
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn" id="btnSignUp" onclick="handleSignUp()">
+								Sign Up and Log In
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+	<script src="js/polyfill.js"></script>
+	<script src="js/popupmodal-min.js"></script>
+<!--===============================================================================================-->
+    <script>$(".toggle-password").click(function() {
+
+        $(this).toggleClass("fa-eye fa-eye-slash");
+        var input = $($(this).attr("toggle"));
+        if (input.attr("type") == "password") {
+            input.attr("type", "text");
+        } else {
+            input.attr("type", "password");
+        }
+    });</script>
+	<script>$(".toggle-password-ver").click(function() {
+
+        $(this).toggleClass("fa-eye fa-eye-slash");
+        var input1 = $($(this).attr("toggle"));
+        if (input1.attr("type") == "password") {
+            input1.attr("type", "text");
+        } else {
+            input1.attr("type", "password");
+        }
+    });</script>
+	<script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+	<script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyB11705lS-Ya4KNoIubWQbIauQi8v2zDVw",
+            authDomain: "augmentedsolutions-cb216.firebaseapp.com",
+            databaseURL: "https://augmentedsolutions-cb216.firebaseio.com",
+            projectId: "augmentedsolutions-cb216",
+            storageBucket: "augmentedsolutions-cb216.appspot.com",
+            messagingSenderId: "590835535173"
+        };
+        firebase.initializeApp(config);
+	</script>
+    <script>
+        function handleSignUp() {
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var passwordVer = document.getElementById('passwordver').value;
+            var name = document.getElementById('nombre').value;
+
+            if (email && password && passwordVer && name) {
+                if (email.length < 4) {
+                    popup.alert({content: 'Porfavor ingrese un correo electronico valido.'});
+                    return;
+                }
+                if (password.length < 4) {
+                    popup.alert({content: 'Porfavor ingrese una contraseña.'});
+                    return;
+                }
+
+                if (password == passwordVer) {
+                    // Sign in with email and pass.
+                    // [START createwithemail]
+                    firebase.auth().createUserWithEmailAndPassword(email, password).then(function (user) {
+                        	var userL = firebase.auth().currentUser;
+                            userL.updateProfile({
+                                displayName: name
+                            }).then(function () {
+                                popup.alert({content: "Usuario Creado con Exito. Redirigiendo..."});
+                                window.location.href = "/SP2/AugmentedSolutions/loginPage/login.html";
+                            }).catch(function f(error) {
+                                // Handle Errors here.
+                                var errorMessage = error.message;
+                                // [START_EXCLUDE]
+                                popup.alert({content: errorMessage});
+                            });
+
+                        }
+                    ).catch(function (error) {
+                        // Handle Errors here.
+                        var errorMessage = error.message;
+                        // [START_EXCLUDE]
+                        popup.alert({content: errorMessage});
+
+                        // [END_EXCLUDE]
+                    });
+                    // [END createwithemail]
+                }else{
+                    popup.alert({content: "Las contraseñas no coinciden"})
+				}
+            }else{
+                popup.alert({content: "Por favor llene todos los campos"})
+
+            }
+        }
+    </script>
+</body>
+</html>

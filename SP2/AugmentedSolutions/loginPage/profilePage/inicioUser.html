@@ -1,0 +1,570 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Bienvenido</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
+
+	<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+	<link href="https://requirejs.org/docs/release/2.3.5/minified/require.js">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/popupmodal.css" />
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<script src="js/vuforia.js"></script>
+		<![endif]-->
+	</head>
+	<body onload="userauth()">
+		
+	<div class="fh5co-loader"></div>
+	<div id="page">
+	<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image:url(images/cover_bg_3.jpg);" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="topcorner">
+            <p>
+                <a href="javascript:void(0);" onclick="logOut();" class="btn btn-info btn-lg">
+                    <span class="icon-log-out"></span> Log Out
+                </a>
+            </p>
+        </div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center">
+                        <div class="display-t js-fullheight">
+						<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
+							<div class="profile-thumb" id="fotousuario"></div>
+							<h1><span id="nombre-usuario"></span></h1>
+							<h3><span>Bienvenido</span></h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div id="fh5co-about" class="animate-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>Tus Datos</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<ul class="info">
+						<li><span class="first-block">Nombre:</span><span class="second-block" id="formname"></span></li>
+						<li><span class="first-block">Email:</span><span class="second-block" id="formmail"></span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-resume" class="fh5co-bg-color">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>Crea tu Publicidad</h2>
+				</div>
+			</div>
+            <!-- PUBLICIDAD DE VIDEOS -->
+            <div class="row">
+                <div class="col-md-12 col-md-offset-0">
+                    <ul class="timeline">
+                        <li class="timeline-heading text-center animate-box">
+                            <div><h3>Publicidad de Videos</h3></div>
+                        </li>
+                        <li class="animate-box timeline-inverted">
+                            <div class="timeline-badge"><i class="icon-folder-images"></i></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h3 class="timeline-title">Selecciona un Video</h3>
+                                </div>
+                                <div class="timeline-inverted">
+                                    <label>
+                                        <input type="file" class="upload-group" id="fileVid">
+                                    </label>
+                                    <button type="button" class="btn" id="uploadButtonVid" onclick="uploadFileVid()">Subir</button>
+                                    <br>
+                                    Progreso:
+                                    <br>
+                                    <progress id="urlTargetVid" max="100" value="0"></progress>
+                                    <label id="VidPercentage">%</label>
+                                    <br>
+                                    <label id="urlVid"></label>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="animate-box timeline-inverted">
+                            <div class="timeline-badge"><i class="icon-image"></i></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h3 class="timeline-title">Selecciona Imagen de Target</h3>
+                                </div>
+                                <div class="timeline-inverted">
+                                    <label>
+                                        <input type="text" class="form-control" id="nameVid" placeholder="Nombre del Target">
+                                        <br>
+                                        <input type="file" class="upload-group" id="fileTargetVid">
+                                    </label>
+                                    <br>
+                                    <label id="urlTargetTextVid"></label>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="animate-box timeline-inverted">
+                            <div class="timeline-badge"><i class="icon-upload-to-cloud"></i></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h3 class="timeline-title">Subir a Vuforia</h3>
+                                </div>
+                                <div class="timeline-inverted">
+                                    <button class="btn btn-lg btn-success" onclick="addTargetVid()">Upload to Vuforia</button>
+                                </div>
+                                <div class="loader d-none" id="loaderVid"></div>
+                                <div class="alert alert-danger d-none" id="errorVid" role="alert"></div>
+                                <div class="alert alert-success d-none" id="successVid" role="alert"></div>
+                            </div>
+                </div>
+                </li>
+                </ul>
+            </div>
+			<!-- PUBLICIDAD DE IMAGENES -->
+			<div class="row">
+				<div class="col-md-12 col-md-offset-0">
+					<ul class="timeline">
+						<li class="timeline-heading text-center animate-box">
+							<div><h3>Publicidad de Imagenes</h3></div>
+						</li>
+						<li class="animate-box timeline-inverted">
+							<div class="timeline-badge"><i class="icon-folder-images"></i></div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h3 class="timeline-title">Selecciona una Imagen</h3>
+								</div>
+								<div class="timeline-inverted">
+									<label>
+										<input type="file" class="upload-group" id="fileImg">
+									</label>
+									<button type="button" class="btn" id="uploadButtonImg" onclick="uploadFileImg()">Subir</button>
+									<br>
+                                    Progreso:
+                                    <br>
+                                    <progress id="urlTargetImg" max="100" value="0"></progress>
+                                    <label id="ImgPercentage">%</label>
+									<br>
+									<label id="urlImg"></label>
+								</div>
+							</div>
+						</li>
+						<li class="animate-box timeline-inverted">
+							<div class="timeline-badge"><i class="icon-image"></i></div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h3 class="timeline-title">Selecciona Imagen de Target</h3>
+								</div>
+								<div class="timeline-inverted">
+									<label>
+										<input type="text" class="form-control" id="nameImg" placeholder="Nombre del Target">
+										<br>
+										<input type="file" class="upload-group" id="fileTargetImg">
+									</label>
+									<br>
+									<label id="urlTargetTextImg"></label>
+								</div>
+							</div>
+						</li>
+						<li class="animate-box timeline-inverted">
+							<div class="timeline-badge"><i class="icon-upload-to-cloud"></i></div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h3 class="timeline-title">Subir a Vuforia</h3>
+								</div>
+								<div class="timeline-inverted">
+									<button class="btn btn-lg btn-success" onclick="addTargetImg()">Upload to Vuforia</button>
+								</div>
+								<div class="loader d-none" id="loaderImg"></div>
+								<div class="alert alert-danger d-none" id="errorImg" role="alert"></div>
+								<div class="alert alert-success d-none" id="successImg" role="alert"></div>
+							</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			<!-- PUBLICIDAD DE TEXTO -->
+			<div class="row">
+				<div class="col-md-12 col-md-offset-0">
+					<ul class="timeline">
+						<li class="timeline-heading text-center animate-box">
+							<div><h3>Publicidad de Texto</h3></div>
+						</li>
+						<li class="animate-box timeline-inverted">
+							<div class="timeline-badge"><i class="icon-folder-images"></i></div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h3 class="timeline-title">Ingresa el texto</h3>
+								</div>
+								<div class="timeline-inverted">
+									<label>
+										<textarea class="text-justify" id="convertText" style="height: 900px; width: 450px"></textarea>
+									</label>
+									<button type="button" class="btn" id="convertTextBtn" onclick="convText()">Aceptar</button>
+									<br>
+									URL Archivo:
+									<br>
+									<label id="text"></label>
+								</div>
+							</div>
+						</li>
+                        <li class="animate-box timeline-inverted">
+                            <div class="timeline-badge"><i class="icon-image"></i></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h3 class="timeline-title">Selecciona Imagen de Target</h3>
+                                </div>
+                                <div class="timeline-inverted">
+                                    <label>
+                                        <input type="text" class="form-control" id="nameTxt" placeholder="Nombre del Target">
+                                        <br>
+                                        <input type="file" class="upload-group" id="fileTargetTxt">
+                                    </label>
+                                    <br>
+                                    <label id="urlTargetTextTxt"></label>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="animate-box timeline-inverted">
+                            <div class="timeline-badge"><i class="icon-upload-to-cloud"></i></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h3 class="timeline-title">Subir a Vuforia</h3>
+                                </div>
+                                <div class="timeline-inverted">
+                                    <button class="btn btn-lg btn-success" onclick="addTargetTxt()">Upload to Vuforia</button>
+                                </div>
+                                <div class="loader d-none" id="loaderTxt"></div>
+                                <div class="alert alert-danger d-none" id="errorTxt" role="alert"></div>
+                                <div class="alert alert-success d-none" id="successTxt" role="alert"></div>
+                            </div>
+                        </div>
+                    </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Easy PieChart -->
+	<script src="js/jquery.easypiechart.min.js"></script>
+	<!-- JS DE VUFORIA -->
+	<!-- libreria para hacer el request a python -->
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<!-- aqui esta lo que manda a llamar a python -->
+	<script src="js/vuforia.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+		<script src="js/polyfill.js"></script>
+		<script src="js/popupmodal-min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.4.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.4.2/firebase-auth.js"></script>
+
+	<script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+	<script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyB11705lS-Ya4KNoIubWQbIauQi8v2zDVw",
+            authDomain: "augmentedsolutions-cb216.firebaseapp.com",
+            databaseURL: "https://augmentedsolutions-cb216.firebaseio.com",
+            projectId: "augmentedsolutions-cb216",
+            storageBucket: "augmentedsolutions-cb216.appspot.com",
+            messagingSenderId: "590835535173"
+        };
+        firebase.initializeApp(config);
+        firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION);
+	</script>
+	<script>
+		function userauth() {
+            document.getElementById('ImgPercentage').style.display = "none";
+            document.getElementById('urlTargetImg').style.display = "none";
+            document.getElementById('VidPercentage').style.display = "none";
+            document.getElementById('urlTargetVid').style.display = "none";
+            firebase.auth().onAuthStateChanged(function (user) {
+                if (user) {
+                    username = user.displayName;
+                    usermail = user.email;
+					userN = username;
+					userphoto = user.photoURL;
+
+                    if(userphoto != null) {
+                        if (userphoto.includes("facebook")) {
+                            userphoto = userphoto + "?type=large";
+                        } else if (userphoto.includes("google")) {
+                            userphoto = userphoto.replace('s96-c', 's400-c');
+                        }
+                    }else{
+                        userphoto = "images/notfound.png";
+					}
+
+                    var name = document.getElementById('nombre-usuario');
+                    var photo = document.getElementById('fotousuario');
+                    var formname = document.getElementById('formname');
+                    var formmail = document.getElementById('formmail');
+                    name.textContent = userN;
+                    formname.textContent = username;
+                    formmail.textContent = usermail;
+                    photo.style.backgroundImage = "url('" + userphoto + "')";
+
+
+                } else {
+                    popup.alert( { content : "Usuario no Autenticado, por favor Inice Sesión" }, function (param) {
+                        if (param.proceed) {
+                            firebase.auth().signOut();
+                            window.location.href = "/SP2/AugmentedSolutions/loginPage/login.html";
+                        }else{
+                            window.location.href = "/SP2/AugmentedSolutions/loginPage/login.html";
+                        }
+                    } );
+
+                }
+            });
+        }
+	</script>
+	<script>
+		function logOut() {
+            popup.confirm( { content : "¿Deseas Salir?" }, function (param) {
+                if (param.proceed) {
+                    firebase.auth().signOut();
+                    window.location.href = "/SP2/AugmentedSolutions/loginPage/login.html";                }else{
+                }
+            } )
+        }
+	</script>
+	<script>
+        var selectedFileImg;
+        var b64url = "";
+        $("#fileImg").on("change", function (event) {
+			selectedFileImg = event.target.files[0];
+            $("#uploadButtonImg").show();
+        });
+
+        var selectedFileVid;
+        var b64url = "";
+        $("#fileVid").on("change", function (event) {
+            selectedFileVid = event.target.files[0];
+            $("#uploadButtonVid").show();
+        });
+
+        //SUBIR A FIREBASE IMAGENES
+		function uploadFileImg() {
+            document.getElementById('ImgPercentage').style.display = "inline";
+            document.getElementById('urlTargetImg').style.display = "inline";
+            var filename = selectedFileImg.name;
+            var storageRef = firebase.storage().ref('/' + username + '/' + filename);
+			var uploadTask = storageRef.put(selectedFileImg);
+            var uploadPercetage = document.getElementById('urlTargetImg');
+            var uploadPercetageTxt = document.getElementById('ImgPercentage');
+            uploadTask.on('state_changed', function(snapshot){
+                // Observe state change events such as progress, pause, and resume
+                // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+                var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                console.log('Upload is ' + progress + '% done');
+                uploadPercetage.value = progress;
+                uploadPercetageTxt.textContent =  Math.trunc(progress) + "%";
+                switch (snapshot.state) {
+                    case firebase.storage.TaskState.PAUSED: // or 'paused'
+                        console.log('Upload is paused');
+                        break;
+                    case firebase.storage.TaskState.RUNNING: // or 'running'
+                        console.log('Upload is running');
+                        break;
+                }
+            }, function(error) {
+                // Handle unsuccessful uploads
+            }, function() {
+                // Handle successful uploads on complete
+                // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+                uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
+                    var url = document.getElementById('urlImg');
+                    b64url = btoa(downloadURL);
+                    url.textContent = b64url;
+                    console.log('File available at', downloadURL);
+                });
+            });
+        }
+        //SUBIR A FIREBASE VIDEOS
+        function uploadFileVid() {
+            document.getElementById('VidPercentage').style.display = "inline";
+            document.getElementById('urlTargetVid').style.display = "inline";
+            var filename = selectedFileVid.name;
+            var storageRef = firebase.storage().ref('/' + username + '/' + filename);
+            var uploadTask = storageRef.put(selectedFileVid);
+            var uploadPercetage = document.getElementById('urlTargetVid');
+            var uploadPercetageTxt = document.getElementById('VidPercentage');
+            uploadTask.on('state_changed', function(snapshot){
+                // Observe state change events such as progress, pause, and resume
+                // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+                var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                console.log('Upload is ' + progress + '% done');
+                uploadPercetage.value = progress;
+                uploadPercetageTxt.textContent =  Math.trunc(progress) + "%";
+                switch (snapshot.state) {
+                    case firebase.storage.TaskState.PAUSED: // or 'paused'
+                        console.log('Upload is paused');
+                        break;
+                    case firebase.storage.TaskState.RUNNING: // or 'running'
+                        console.log('Upload is running');
+                        break;
+                }
+            }, function(error) {
+                // Handle unsuccessful uploads
+            }, function() {
+                // Handle successful uploads on complete
+                // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+                uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
+                    var url = document.getElementById('urlVid');
+                    b64url = btoa(downloadURL);
+                    url.textContent = b64url;
+                    console.log('File available at', downloadURL);
+                });
+            });
+        }
+	</script>
+	<script type='text/javascript'>
+        var b64img = "";
+        var filename = '';
+        function encodeImageFileAsURL() {
+
+            var filesSelected = document.getElementById("fileTarget").files;
+            var fullPath = document.getElementById('fileTarget').value;
+            if (fullPath) {
+                var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+                filename = fullPath.substring(startIndex);
+                if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+                    filename = filename.substring(1);
+                }
+            }
+
+            if (filesSelected.length > 0) {
+                var fileToLoad = filesSelected[0];
+
+                var fileReader = new FileReader();
+
+                fileReader.onload = function(fileLoadedEvent) {
+                    var srcData = fileLoadedEvent.target.result; // <--- data: base64
+
+                    var newImage = document.createElement('img');
+                    newImage.src = srcData;
+
+                    document.getElementById("urlTarget").innerHTML = newImage.outerHTML;
+                    var b64start = srcData.indexOf("base64,") + 6;
+                    var b64end = srcData.length;
+                    b64img = srcData.substring(b64start+1, b64end-1);
+                    document.getElementById("urlTargetText").textContent = b64img;
+                };
+                fileReader.readAsDataURL(fileToLoad);
+            }
+        }
+        //SHOW DE IMAGEN PARA PUBLICACIONES DE IMAGENES
+        function encodeImageFileAsURL1() {
+
+            var filesSelected1 = document.getElementById("fileTargetImg").files;
+            var fullPath1 = document.getElementById('fileTargetImg').value;
+            if (fullPath1) {
+                var startIndex1 = (fullPath1.indexOf('\\') >= 0 ? fullPath1.lastIndexOf('\\') : fullPath1.lastIndexOf('/'));
+                filename1 = fullPath1.substring(startIndex1);
+                if (filename1.indexOf('\\') === 0 || filename1.indexOf('/') === 0) {
+                    filename1 = filename1.substring(1);
+                }
+            }
+
+            if (filesSelected1.length > 0) {
+                var fileToLoad1 = filesSelected1[0];
+
+                var fileReader1 = new FileReader();
+
+                fileReader1.onload = function(fileLoadedEvent1) {
+                    var srcData1 = fileLoadedEvent1.target.result; // <--- data: base64
+
+                    var newImage1 = document.createElement('img');
+                    newImage1.src = srcData1;
+
+                    document.getElementById("urlTargetImg").innerHTML = newImage1.outerHTML;
+                    var b64start1 = srcData1.indexOf("base64,") + 6;
+                    var b64end1 = srcData1.length;
+                    b64img1 = srcData1.substring(b64start1+1, b64end1-1);
+                    document.getElementById("urlTargetTextImg").textContent = b64img1;
+                };
+                fileReader1.readAsDataURL(fileToLoad1);
+            }
+        }
+        //SHOW DE IMAGEN PARA PUBLICACIONES DE TEXTO
+        function encodeImageFileAsURL2() {
+
+            var filesSelected2 = document.getElementById("fileTargetTxt").files;
+            var fullPath2 = document.getElementById('fileTargetTxt').value;
+            if (fullPath2) {
+                var startIndex2 = (fullPath2.indexOf('\\') >= 0 ? fullPath2.lastIndexOf('\\') : fullPath2.lastIndexOf('/'));
+                filename2 = fullPath2.substring(startIndex2);
+                if (filename2.indexOf('\\') === 0 || filename2.indexOf('/') === 0) {
+                    filename2 = filename2.substring(1);
+                }
+            }
+
+            if (filesSelected2.length > 0) {
+                var fileToLoad2 = filesSelected2[0];
+
+                var fileReader2 = new FileReader();
+
+                fileReader2.onload = function(fileLoadedEvent2) {
+                    var srcData2 = fileLoadedEvent2.target.result; // <--- data: base64
+
+                    var newImage2 = document.createElement('img');
+                    newImage2.src = srcData2;
+
+                    document.getElementById("urlTargetTxt").innerHTML = newImage2.outerHTML;
+                    var b64start2 = srcData2.indexOf("base64,") + 6;
+                    var b64end2 = srcData2.length;
+                    b64img2 = srcData2.substring(b64start2+1, b64end2-1);
+                    document.getElementById("urlTargetTextTxt").textContent = b64img2;
+                };
+                fileReader2.readAsDataURL(fileToLoad2);
+            }
+        }
+	</script>
+	<script>
+		function convText() {
+            var txt = document.getElementById("convertText").value;
+			var b64text =  btoa(txt);
+            var encodedtxt = document.getElementById("text");
+            encodedtxt.textContent = b64text;
+        }
+	</script>
+	</body>
+</html>
+
