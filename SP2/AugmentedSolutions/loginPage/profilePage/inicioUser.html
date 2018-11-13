@@ -49,8 +49,8 @@
                         <div class="display-t js-fullheight">
 						<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
 							<div class="profile-thumb" id="fotousuario"></div>
-							<h1><span id="nombre-usuario"></span></h1>
-							<h3><span>Bienvenido</span></h3>
+							<h1><span id="nombre-usuario" style="font-size: 55pt"></span></h1>
+							<h3><span style="font-size: 25pt">Bienvenido</span></h3>
 						</div>
 					</div>
 				</div>
@@ -62,14 +62,14 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Tus Datos</h2>
+					<h2 class="">Tus Datos</h2>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-4">
 					<ul class="info">
-						<li><span class="first-block">Nombre:</span><span class="second-block" id="formname"></span></li>
-						<li><span class="first-block">Email:</span><span class="second-block" id="formmail"></span></li>
+						<li><span class="first-block" style="font-size: 20pt">Nombre:</span><span class="second-block" id="formname" style="font-size: 20pt"></span></li>
+						<li><span class="first-block" style="font-size: 20pt">Email:</span><span class="second-block" id="formmail" style="font-size: 20pt"></span></li>
 					</ul>
 				</div>
 			</div>
@@ -84,11 +84,12 @@
 				</div>
 			</div>
             <!-- PUBLICIDAD DE VIDEOS -->
-            <div class="row">
+			<div id="PublicidadVideo" style="background-color: orange; height: 40px" align="center"><h3>Publicidad de Videos</h3></div>
+			<br>
+            <div class="row" id="divVid" style="display: none">
                 <div class="col-md-12 col-md-offset-0">
                     <ul class="timeline">
                         <li class="timeline-heading text-center animate-box">
-                            <div><h3>Publicidad de Videos</h3></div>
                         </li>
                         <li class="animate-box timeline-inverted">
                             <div class="timeline-badge"><i class="icon-folder-images"></i></div>
@@ -146,11 +147,11 @@
                 </ul>
             </div>
 			<!-- PUBLICIDAD DE IMAGENES -->
-			<div class="row">
+			<div id="PublicidadImagen"><h3 style="background-color: orange; height: 40px" align="center">Publicidad de Imagenes</h3></div>
+			<div class="row" id="divImg" style="display: none">
 				<div class="col-md-12 col-md-offset-0">
 					<ul class="timeline">
 						<li class="timeline-heading text-center animate-box">
-							<div><h3>Publicidad de Imagenes</h3></div>
 						</li>
 						<li class="animate-box timeline-inverted">
 							<div class="timeline-badge"><i class="icon-folder-images"></i></div>
@@ -208,11 +209,11 @@
 					</ul>
 				</div>
 			<!-- PUBLICIDAD DE TEXTO -->
-			<div class="row">
+			<div id="PublicidadTexto"><h3 style="background-color: orange; height: 40px" align="center">Publicidad de Texto</h3></div>
+			<div class="row" id="divTexto" style="display: none">
 				<div class="col-md-12 col-md-offset-0">
 					<ul class="timeline">
 						<li class="timeline-heading text-center animate-box">
-							<div><h3>Publicidad de Texto</h3></div>
 						</li>
 						<li class="animate-box timeline-inverted">
 							<div class="timeline-badge"><i class="icon-folder-images"></i></div>
@@ -226,7 +227,6 @@
 									</label>
 									<button type="button" class="btn" id="convertTextBtn" onclick="convText()">Aceptar</button>
 									<br>
-									URL Archivo:
 									<br>
 									<label id="text"></label>
 								</div>
@@ -314,6 +314,10 @@
             document.getElementById('urlTargetImg').style.display = "none";
             document.getElementById('VidPercentage').style.display = "none";
             document.getElementById('urlTargetVid').style.display = "none";
+            document.getElementById('text').style.display = "none";
+            document.getElementById('urlImg').style.display = "none";
+            document.getElementById('urlVid').style.display = "none";
+
             firebase.auth().onAuthStateChanged(function (user) {
                 if (user) {
                     username = user.displayName;
@@ -563,6 +567,40 @@
 			var b64text =  btoa(txt);
             var encodedtxt = document.getElementById("text");
             encodedtxt.textContent = b64text;
+        }
+	</script>
+	<script>
+		var pubVideos =  document.getElementById('PublicidadVideo');
+		pubVideos.style.cursor = 'pointer';
+		pubVideos.onclick =  function () {
+			var divVideo = document.getElementById('divVid');
+			if(divVideo.style.display == "none"){
+			    divVideo.style.display = "block";
+			} else {
+			    divVideo.style.display = "none";
+			}
+        }
+
+        var pubImagen =  document.getElementById('PublicidadImagen');
+        pubImagen.style.cursor = 'pointer';
+        pubImagen.onclick =  function () {
+            var divImagen = document.getElementById('divImg');
+            if(divImagen.style.display == "none"){
+                divImagen.style.display = "block";
+            } else {
+                divImagen.style.display = "none";
+            }
+        }
+
+        var pubTexto =  document.getElementById('PublicidadTexto');
+        pubTexto.style.cursor = 'pointer';
+        pubTexto.onclick =  function () {
+            var divTexto = document.getElementById('divTexto');
+            if(divTexto.style.display == "none"){
+                divTexto.style.display = "block";
+            } else {
+                divTexto.style.display = "none";
+            }
         }
 	</script>
 	</body>
